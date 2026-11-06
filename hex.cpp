@@ -124,8 +124,8 @@ int64_t convertToDecimal(str INPUT){
     str rev = reverse(INPUT); // now index 0 is also exponent 0
     int64_t output = 0;
     for(int i = 0; i < length; i++){
-        output += convertCharacterToDecimal(INPUT[i]) * (pow(16,i));
-        cout << output << '\n';
+        output += convertCharacterToDecimal(rev[i]) * (pow(16,i));
+        //cout << output << '\n';
     }
     return output; // Returns the wrong value.
 }
